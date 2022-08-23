@@ -13,11 +13,14 @@ class ApiController{
         
         $palabras = Palabras::all();
 
+        echo ('index');
         echo json_encode($palabras);
     
     }
 
     public static function porCaracteres(){
+
+        echo ('porCaracteres');
 
         if(isset($_GET['largo'])){
 
