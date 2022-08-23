@@ -1,5 +1,5 @@
 <?php
-
+header('Access-Control-Allow-Origin: *');
 use MVC\Router;
 use Controller\ApiController;
 
