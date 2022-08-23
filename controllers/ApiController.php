@@ -13,20 +13,20 @@ class ApiController{
         
         $palabras = Palabras::all();
 
-        echo ('index');
-        echo json_encode($palabras);
+        // echo json_encode($palabras);
+        debuguear($palabras);
     
     }
 
     public static function porCaracteres(){
 
-        echo ('porCaracteres');
 
         if(isset($_GET['largo'])){
 
             $largo = $_GET['largo'];
             $palabras = Palabras::whereAll('largo',$largo);
-            echo json_encode($palabras);
+            debuguear($palabras);
+            // echo json_encode($palabras);
 
         }else{
             echo json_encode('Falta el parametro ?largo=');
